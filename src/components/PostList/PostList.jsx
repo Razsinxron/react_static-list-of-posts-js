@@ -1,12 +1,12 @@
 import { PostInfo } from '../PostInfo/PostInfo';
 
-export const PostList = ({ serverProps }) => {
+export const PostList = ({ posts }) => {
   // console.log('server', serverProps);
 
   return (
     <div className="PostList">
-      {serverProps.map(postProp => (
-        <PostInfo key={postProp.id} postProp={postProp} />
+      {posts.map(post => (
+        <PostInfo key={post.id} post={post} />
       ))}
     </div>
   );
